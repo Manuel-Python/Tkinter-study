@@ -1,17 +1,16 @@
-# with open("data.csv") as data_file:
-#     data = csv.reader(data_file)
-#     print(data)
+
 
 
 from tkinter import *
 
-def miles_to_km():
-    miles = float(miles_input.get())
-    km = round(miles * 1.609)
-    kilometer_result_label.config(text=f"{km}")
+def read_file():
+    with open("data.csv") as data_file:
+        data = data_file.read()
+
+        print(data)
 
 window = Tk()
-window.title("Miles to Kilometer converter")
+window.title("Read data File")
 window.config(padx=20, pady=20)
 
 miles_input = Entry(width=7)
@@ -29,8 +28,13 @@ kilometer_result_label.grid(column=1 , row=1 )
 kilometer_label = Label(text="Km")
 kilometer_label.grid(column=2, row=1 )
 
-calculate_button = Button(text="Calculate", command=miles_to_km)
+calculate_button = Button(text="Read File", command=read_file)
 calculate_button.grid(column=1 , row=2 )
+
+text = Text(height=5, width=30)
+text.focus()
+text.insert(END, "Multi-line text entry")
+text.grid(column=1,row=4)
 
 
 
