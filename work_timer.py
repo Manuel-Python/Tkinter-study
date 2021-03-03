@@ -55,6 +55,14 @@ def count_down(count):
             marks += "✔"
         check_marks.config(text=marks)
 
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    title_label.config(text="Timer")
+    check_marks.config(text="")
+    global reps
+    reps = 0
+
 
 
 window = Tk()
@@ -74,8 +82,8 @@ canvas.grid(column=1, row=1)
 start_button = Button(text="Start", highlightthickness=0, command=start_timer)
 start_button.grid(column=0, row=2)
 
-#reset_button = Button(text="Reset", highlightthickness=0, command=reset_timer)
-#reset_button.grid(column=2, row=2)
+reset_button = Button(text="Reset", highlightthickness=0, command=reset_timer)
+reset_button.grid(column=2, row=2)
 
 check_marks = Label(fg=GREEN, bg=YELLOW)
 check_marks.grid(column=1, row=3)
