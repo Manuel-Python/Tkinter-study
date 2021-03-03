@@ -58,7 +58,7 @@ def count_down(count):
 def reset_timer():
     window.after_cancel(timer)
     canvas.itemconfig(timer_text, text="00:00")
-    title_label.config(text="Timer")
+    title_label.config(text="Apple Timer")
     check_marks.config(text="")
     global reps
     reps = 0
@@ -67,15 +67,15 @@ def reset_timer():
 
 window = Tk()
 window.title("Work Timer")
-window.config(padx=400, pady=400, bg=YELLOW)
+window.config(padx=200, pady=200, bg=YELLOW)
 
 
-title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
+title_label = Label(text="Apple Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50))
 title_label.grid(column=1, row=0)
 
-canvas = Canvas(width=500, height=500, bg=YELLOW, highlightthickness=0)
-tomato_img = PhotoImage(file="tomato.png")
-canvas.create_image(100, 112, image=tomato_img)
+canvas = Canvas(width=300, height=300, bg=YELLOW, highlightthickness=0)
+tomato_img = PhotoImage(file="apple.png")
+canvas.create_image(140, 112, image=tomato_img)
 timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
 
