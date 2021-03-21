@@ -4,6 +4,8 @@ from random import choice, randint, shuffle
 import pyperclip
 #2
 
+def encrypt_password(password):
+    print(password)
 
 #Password Generator Project
 def generate_password():
@@ -20,8 +22,9 @@ def generate_password():
 
     password = "".join(password_list)
     password_entry.insert(0, password)
-    pyperclip.copy(password)
+    #pyperclip.copy(password)
 
+    encrypt_password(password)
 
 def save():
 
