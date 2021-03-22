@@ -62,6 +62,10 @@ email_label = Label(text="Username:")
 email_label.grid(row=2, column=0)
 password_label = Label(text="Password:")
 password_label.grid(row=2, column=0)
+encript_label = Label(text="Encripted:")
+encript_label.grid(row=5, column=0)
+encript_result = Label(text="******************")
+encript_result.grid(row=5, column=1)
 
 #Entries
 website_entry = Entry(width=35)
