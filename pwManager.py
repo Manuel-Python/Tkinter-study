@@ -6,6 +6,7 @@ import pyperclip
 
 def encrypt_password(password):
     print(password)
+    encript_result.configure(text=password)
 
 #Password Generator Project
 def generate_password():
