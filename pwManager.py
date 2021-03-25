@@ -5,9 +5,14 @@ import pyperclip
 #2
 
 def encrypt_password(password):
+    enc_nums = []
     print(password)
     for ch in password:
-        print(ord(ch)^23)
+        enc = ord(ch)^23 # 23 is XOR key
+        enc_nums.append(enc)
+
+    print(enc_nums)
+
     encript_result.configure(text=password)
 
 #Password Generator Project
