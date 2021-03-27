@@ -13,6 +13,11 @@ def encrypt_password(password):
 
     print(enc_nums)
 
+    with open("cyther.txt", "a") as data_file:
+        data_file.write(f"{enc_nums} \n")
+        print("crypt.txt file created")
+
+
     encript_result.configure(text=password)
 
 #Password Generator Project
