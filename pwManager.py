@@ -15,7 +15,7 @@ def encrypt_password(password):
 
     with open("cyther.txt", "a") as data_file:
         data_file.write(f"{enc_nums} \n")
-        print("crypt.txt file created")
+        print("crypt.txt file created or appended")
 
 
     encript_result.configure(text=password)
@@ -92,10 +92,10 @@ password_entry.grid(row=3, column=1)
 
 
 # Buttons
-generate_password_button = Button(text="Generate Password", command=generate_password)
+generate_password_button = Button(text="Gen Pwd", command=generate_password)
 generate_password_button.grid(row=3, column=2)
-add_button = Button(text="Add", width=36, command=save)
-add_button.grid(row=4, column=0, columnspan=3)
+add_button = Button(text="Add",  command=save)
+add_button.grid(row=4, column=1)
 
 
 
