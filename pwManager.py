@@ -41,8 +41,14 @@ def generate_password():
 
 def read():
     with open("cyther.txt", "r") as data_file:
-        data = data_file.read()
-        print(data)
+        data = data_file.readlines()
+
+    index = 0
+    for line in data:
+        index += 1
+        print(index,line)
+
+
 
 
 def save():
