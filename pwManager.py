@@ -39,6 +39,12 @@ def generate_password():
 
     encrypt_password(password)
 
+def read():
+    with open("cyther.txt", "r") as data_file:
+        data = data_file.read()
+        print(data)
+
+
 def save():
 
     website = website_entry.get()
@@ -93,9 +99,12 @@ password_entry.grid(row=3, column=1)
 
 # Buttons
 generate_password_button = Button(text="Gen Pwd", command=generate_password)
-generate_password_button.grid(row=3, column=2)
+
 add_button = Button(text="Add",  command=save)
 add_button.grid(row=4, column=1)
+
+add_button = Button(text="Read",  command=read)
+add_button.grid(row=4, column=2)
 
 
 
