@@ -21,7 +21,7 @@ def encrypt_password(password):
     encript_result.configure(text=password)
 
 
-def find_password():
+def find_password1():
     website = website_entry.get()
     try:
         with open("data.json") as data_file:
@@ -175,8 +175,12 @@ generate_password_button.grid(row=4, column=0)
 add_button = Button(text="Add",  command=save)
 add_button.grid(row=4, column=1)
 
-add_button = Button(text="Read",  command=read)
-add_button.grid(row=4, column=2)
+add_button1 = Button(text="Read",  command=read)
+add_button1.grid(row=4, column=2)
+
+
+add_button2 = Button(text="JSON Find",  command=find_password1)
+add_button2.grid(row=4, column=3)
 
 
 
