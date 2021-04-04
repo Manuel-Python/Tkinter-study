@@ -173,7 +173,7 @@ password_entry.grid(row=3, column=1)
 generate_password_button = Button(text="Gen Pwd", command=generate_password)
 generate_password_button.grid(row=4, column=0)
 add_button = Button(text="Add",  command=save)
-add_button.grid(row=4, column=1)
+add_button.grid(row=4, column=1, columnspan=2)
 
 add_button1 = Button(text="Read",  command=read)
 add_button1.grid(row=4, column=2)
