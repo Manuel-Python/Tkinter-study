@@ -1,6 +1,8 @@
-import pygal as pygal
+
 import requests
-import pygal
+
+
+
 
 MY_LAT = 51.507351 # Your latitude
 MY_LONG = -0.127758 # Your longitude
@@ -8,6 +10,10 @@ iss_lat = 0.0
 iss_long = 0.0
 
 positionISS = []
+
+def save(position):
+    with open("position.txt", "a") as data_file:
+        data_file.write(f"{position[0]} | {position[1]} \n")
 
 def iss_position():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
@@ -23,5 +29,9 @@ def iss_position():
     return iss_loc
 
 for n in range(200):
-    positionISS.append(iss_position())
-    print(positionISS)
+    a = iss_position()
+    save(a)
+    positionISS.append(a)
+
+print(positionISS)
+
