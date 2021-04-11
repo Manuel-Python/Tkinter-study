@@ -1,23 +1,14 @@
+import numpy as np
 import pandas as pd
-import plotly.express as px
+import matplotlib.pyplot as plt
+import matplotlib as mlt
+from mpl_toolkits.basemap import Basemap
+from PIL import Image
+from pylab import rcParams
 
-# download dataset
-#!wget
-#https: // covid.ourworldindata.org / data / owid - covid - data.csv
 
-# import dataset
-df = pd.read_csv('owid-covid-data.csv')
+df=pd.read_csv("cities.csv")
+df.shape
 
-# select entries with the continent as asia
-df = df[df.continent == 'Asia']
+df.head(3)
 
-# plot
-fig = px.choropleth(df, locations="iso_code",
-                    color="new_cases",
-                    hover_name="location",
-                    animation_frame="date",
-                    title="Daily new COVID cases",
-                    scope='asia', color_continuous_scale=px.colors.sequential.PuRd)
-
-fig["layout"].pop("updatemenus")
-fig.show()

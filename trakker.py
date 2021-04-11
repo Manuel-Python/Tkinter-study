@@ -54,6 +54,6 @@ for x in positionISS:
     string = f"{x[0]} {x[1]}"
     s+= string
 
-send_email(s)
+#send_email(s)
 print(positionISS)
 
