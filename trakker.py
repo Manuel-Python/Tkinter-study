@@ -1,8 +1,10 @@
 
 import requests
+import smtplib
 
 
-
+MY_EMAIL = "___YOUR_EMAIL_HERE____"
+MY_PASSWORD = "___YOUR_PASSWORD_HERE___"
 
 MY_LAT = 51.507351 # Your latitude
 MY_LONG = -0.127758 # Your longitude
@@ -11,9 +13,20 @@ iss_long = 0.0
 
 positionISS = []
 
+def send_email(message):
+        connection = smtplib.SMTP("__YOUR_SMTP_ADDRESS_HERE___")
+        connection.starttls()
+        connection.login(MY_EMAIL, MY_PASSWORD)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs=MY_EMAIL,
+            msg="Subject: Test Email\n" + message
+        )
+
+
 def save(position):
     with open("position.txt", "a") as data_file:
-        data_file.write(f"{position[0]} | {position[1]} \n")
+        data_file.write(f"{position[0]} , {position[1]} \n")
 
 def iss_position():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
@@ -33,5 +46,14 @@ for n in range(200):
     save(a)
     positionISS.append(a)
 
+
+
+
+s=""
+for x in positionISS:
+    string = f"{x[0]} {x[1]}"
+    s+= string
+
+send_email(s)
 print(positionISS)
 
