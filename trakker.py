@@ -1,7 +1,11 @@
+from tkinter import *
 
 import requests
 import smtplib
 
+window = Tk()
+window.title("ISS Tracker")
+window.config(padx=20, pady=20)
 
 MY_EMAIL = "___YOUR_EMAIL_HERE____"
 MY_PASSWORD = "___YOUR_PASSWORD_HERE___"
@@ -41,6 +45,9 @@ def iss_position():
 
     return iss_loc
 
+
+
+
 for n in range(200):
     a = iss_position()
     save(a)
@@ -56,4 +63,6 @@ for x in positionISS:
 
 #send_email(s)
 print(positionISS)
+
+window.mainloop()
 
