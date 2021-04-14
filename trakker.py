@@ -52,6 +52,10 @@ window.config(padx=20, pady=20)
 website_label = Label(text="ISS Tracker:")
 website_label.grid(row=1, column=0)
 
+pos_label = Label(text="Username:")
+pos_label.grid(row=1, column=1)
+
+
 
 for n in range(20):
     a = iss_position()
