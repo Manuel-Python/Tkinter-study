@@ -52,7 +52,7 @@ window.config(padx=20, pady=20)
 website_label = Label(text="ISS Tracker:")
 website_label.grid(row=1, column=0)
 
-pos_label = Label(text="Username:")
+pos_label = Label(text="Lat / Long")
 pos_label.grid(row=1, column=1)
 
 
