@@ -43,6 +43,20 @@ def iss_position():
 
     return iss_loc
 
+def generate_location():
+    for n in range(20):
+        a = iss_position()
+        save(a)
+        positionISS.append(a)
+
+    s = ""
+    for x in positionISS:
+        string = f"{x[0]} {x[1]}"
+        s += string
+
+    # send_email(s)
+    print(positionISS)
+
 
 window = Tk()
 window.title("ISS Tracker")
@@ -56,22 +70,11 @@ pos_label = Label(text="Lat / Long")
 pos_label.grid(row=1, column=1)
 
 
-
-for n in range(20):
-    a = iss_position()
-    save(a)
-    positionISS.append(a)
+generate_password_button = Button(text="Gen Loc", command=generate_location)
+generate_password_button.grid(row=2, column=0)
 
 
 
-
-s=""
-for x in positionISS:
-    string = f"{x[0]} {x[1]}"
-    s+= string
-
-#send_email(s)
-print(positionISS)
 
 window.mainloop()
 
