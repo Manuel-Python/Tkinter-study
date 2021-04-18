@@ -62,6 +62,12 @@ window = Tk()
 window.title("ISS Tracker")
 window.config(padx=20, pady=20)
 
+canvas = Canvas(height=200, width=200)
+logo_img = PhotoImage(file="apple.png")
+canvas.create_image(100, 100, image=logo_img)
+canvas.grid(row=0, column=1)
+
+
 #Labels
 website_label = Label(text="ISS Tracker:")
 website_label.grid(row=1, column=0)
