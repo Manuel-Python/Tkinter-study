@@ -79,6 +79,12 @@ pos_label.grid(row=1, column=1)
 generate_password_button = Button(text="Gen Loc", command=generate_location)
 generate_password_button.grid(row=2, column=0)
 
+text = Text(height=5, width=30)
+text.focus()
+text.insert(END, "File data goes here")
+text.grid(column=0,row=3, columnspan=3)
+
+
 
 
 
