@@ -90,6 +90,10 @@ loc_button.grid(row=2, column=0)
 read_button = Button(text="Read File", command=read_file)
 read_button.grid(row=2, column=1)
 
+del_button = Button(text="Delete File", command=read_file)
+del_button.grid(row=2, column=2)
+
+
 text = Text(height=5, width=30)
 text.focus()
 text.insert(END, "File data goes here")
