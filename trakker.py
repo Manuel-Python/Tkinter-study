@@ -58,6 +58,14 @@ def generate_location():
     print(positionISS)
 
 
+def read_file():
+    with open("position.txt") as data_file:
+        data = data_file.read()
+        text.delete('1.0', END)
+        text.insert(END,data)
+
+
+
 window = Tk()
 window.title("ISS Tracker")
 window.config(padx=20, pady=20)
@@ -76,8 +84,11 @@ pos_label = Label(text="Lat / Long")
 pos_label.grid(row=1, column=1)
 
 
-generate_password_button = Button(text="Gen Loc", command=generate_location)
-generate_password_button.grid(row=2, column=0)
+loc_button = Button(text="Gen Loc", command=generate_location)
+loc_button.grid(row=2, column=0)
+
+read_button = Button(text="Read File", command=read_file)
+read_button.grid(row=2, column=1)
 
 text = Text(height=5, width=30)
 text.focus()
