@@ -1,5 +1,5 @@
 from tkinter import *
-
+import os
 import requests
 import smtplib
 
@@ -65,6 +65,9 @@ def read_file():
         text.insert(END,data)
 
 
+def del_file():
+    os.remove("position.txt")
+
 
 window = Tk()
 window.title("ISS Tracker")
@@ -90,7 +93,7 @@ loc_button.grid(row=2, column=0)
 read_button = Button(text="Read File", command=read_file)
 read_button.grid(row=2, column=1)
 
-del_button = Button(text="Delete File", command=read_file)
+del_button = Button(text="Delete File", command=del_file)
 del_button.grid(row=2, column=2)
 
 
