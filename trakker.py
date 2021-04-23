@@ -97,6 +97,10 @@ read_button.grid(row=2, column=1)
 del_button = Button(text="Delete File", command=del_file)
 del_button.grid(row=2, column=2)
 
+new_button = Button(text="New File", command=del_file)
+new_button.grid(row=2, column=3)
+
+
 
 text = Text(height=5, width=30)
 text.focus()
