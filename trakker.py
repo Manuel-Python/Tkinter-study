@@ -66,7 +66,8 @@ def read_file():
 
 
 def del_file():
-    os.remove("position.txt")
+    if os.path.isfile("position.txt"):
+        os.remove("position.txt")
 
 
 window = Tk()
