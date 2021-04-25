@@ -104,6 +104,10 @@ del_button.grid(row=2, column=2)
 new_button = Button(text="New File", command=new_file)
 new_button.grid(row=2, column=3)
 
+analyse_button = Button(text="Analyse File", command=new_file)
+analyse_button.grid(row=3, column=3)
+
+
 
 
 text = Text(height=5, width=30)
