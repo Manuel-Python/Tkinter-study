@@ -57,6 +57,10 @@ def generate_location():
     # send_email(s)
     print(positionISS)
 
+def new_file():
+    with open("position.txt", "a") as data_file:
+        pass
+
 
 def read_file():
     with open("position.txt") as data_file:
@@ -97,7 +101,7 @@ read_button.grid(row=2, column=1)
 del_button = Button(text="Delete File", command=del_file)
 del_button.grid(row=2, column=2)
 
-new_button = Button(text="New File", command=del_file)
+new_button = Button(text="New File", command=new_file)
 new_button.grid(row=2, column=3)
 
 
