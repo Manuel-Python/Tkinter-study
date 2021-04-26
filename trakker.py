@@ -73,6 +73,19 @@ def del_file():
     if os.path.isfile("position.txt"):
         os.remove("position.txt")
 
+def analyse_file():
+    lineNum = 0
+    with open("position.txt") as data_file:
+        for line in data_file:
+            lineNum += 1
+            data = data_file.readline()
+
+    text.delete('1.0', END)
+    text.insert(END, f"Number of lines {0}",lineNum)
+
+
+
+
 
 window = Tk()
 window.title("ISS Tracker")
@@ -104,7 +117,7 @@ del_button.grid(row=2, column=2)
 new_button = Button(text="New File", command=new_file)
 new_button.grid(row=2, column=3)
 
-analyse_button = Button(text="Analyse File", command=new_file)
+analyse_button = Button(text="Analyse File", command=analyse_file)
 analyse_button.grid(row=3, column=3)
 
 
