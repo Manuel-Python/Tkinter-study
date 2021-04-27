@@ -74,14 +74,15 @@ def del_file():
         os.remove("position.txt")
 
 def analyse_file():
-    lineNum = 0
+    lineNums = 0
     with open("position.txt") as data_file:
         for line in data_file:
-            lineNum += 1
+            lineNums += 1
+            print(lineNums)
             data = data_file.readline()
 
     text.delete('1.0', END)
-    text.insert(END, f"Number of lines {0}",lineNum)
+    text.insert(END, f"Number of lines {lineNums}")
 
 
 
