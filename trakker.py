@@ -122,6 +122,10 @@ analyse_button = Button(text="Analyse File", command=analyse_file)
 analyse_button.grid(row=3, column=3)
 
 
+new_button = Button(text="New Window", command=analyse_file)
+new_button.grid(row=4, column=3)
+
+
 
 
 text = Text(height=5, width=30)
