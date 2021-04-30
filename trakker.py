@@ -140,6 +140,10 @@ new_button = Button(text="New Window", command=new_window)
 new_button.grid(row=4, column=3)
 
 
+send_button = Button(text="Email", command=send_email)
+send_button.grid(row=4, column=0)
+
+
 
 
 text = Text(height=5, width=30)
