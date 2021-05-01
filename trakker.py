@@ -73,6 +73,9 @@ def del_file():
     if os.path.isfile("position.txt"):
         os.remove("position.txt")
 
+def clear_text():
+    pass
+
 def analyse_file():
     lineNums = 0
     with open("position.txt") as data_file:
@@ -144,6 +147,8 @@ send_button = Button(text="Email", command=send_email)
 send_button.grid(row=4, column=0)
 
 
+clear_button = Button(text="Clear", command=clear_text)
+clear_button.grid(row=4, column=1)
 
 
 text = Text(height=5, width=30)
