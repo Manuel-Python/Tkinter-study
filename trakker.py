@@ -74,7 +74,7 @@ def del_file():
         os.remove("position.txt")
 
 def clear_text():
-    pass
+    text.delete('1.0', END)
 
 def analyse_file():
     lineNums = 0
