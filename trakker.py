@@ -150,6 +150,8 @@ send_button.grid(row=4, column=0)
 clear_button = Button(text="Clear", command=clear_text)
 clear_button.grid(row=4, column=1)
 
+other_button = Button(text="Function", command=clear_text)
+other_button.grid(row=0, column=2)
 
 text = Text(height=5, width=30)
 text.focus()
