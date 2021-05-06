@@ -109,6 +109,9 @@ def change_image():
     canvas.create_image(100, 100, image=logo_img)
     canvas.image_names(logo_img)
 
+def dir_listing():
+    print(os.listdir("/"))
+
 
 window = Tk()
 window.title("ISS Tracker")
@@ -157,6 +160,9 @@ clear_button.grid(row=4, column=1)
 
 other_button = Button(text="Image", command=change_image)
 other_button.grid(row=0, column=2)
+
+other_button = Button(text="Directory", command=dir_listing)
+other_button.grid(row=0, column=3)
 
 text = Text(height=5, width=30)
 text.focus()
