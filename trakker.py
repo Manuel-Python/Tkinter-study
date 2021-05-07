@@ -110,7 +110,14 @@ def change_image():
     canvas.image_names(logo_img)
 
 def dir_listing():
-    print(os.listdir("/"))
+    dir_list = os.listdir("/")
+    text_list = ""
+    for d in dir_list:
+        text_list += f"{d}, "
+
+    text.delete('1.0', END)
+    text.insert(END, f" {text_list}")
+    #print(os.listdir("/"))
 
 
 window = Tk()
