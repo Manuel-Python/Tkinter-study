@@ -119,6 +119,9 @@ def dir_listing():
     text.insert(END, f" {text_list}")
     #print(os.listdir("/"))
 
+def files_listing():
+    pass
+
 
 window = Tk()
 window.title("ISS Tracker")
@@ -170,6 +173,9 @@ other_button.grid(row=0, column=2)
 
 direct_button = Button(text="Directory", command=dir_listing)
 direct_button.grid(row=0, column=3)
+
+dir_button = Button(text="Files Dir", command=files_listing)
+dir_button.grid(row=0, column=4)
 
 text = Text(height=5, width=30)
 text.focus()
