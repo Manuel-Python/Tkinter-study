@@ -120,7 +120,8 @@ def dir_listing():
     #print(os.listdir("/"))
 
 def files_listing():
-    pass
+    file_list = os.listdir()
+    print(file_list)
 
 
 window = Tk()
