@@ -121,7 +121,14 @@ def dir_listing():
 
 def files_listing():
     file_list = os.listdir()
-    print(file_list)
+
+    text_list = ""
+    for d in file_list:
+        text_list += f"{d}, "
+
+    text.delete('1.0', END)
+    text.insert(END, f" {text_list}")
+
 
 
 window = Tk()
