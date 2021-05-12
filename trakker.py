@@ -124,7 +124,8 @@ def files_listing():
 
     text_list = ""
     for d in file_list:
-        text_list += f"{d}, "
+        if d.endswith(".py"):
+            text_list += f"{d}, "
 
     text.delete('1.0', END)
     text.insert(END, f" {text_list}")
