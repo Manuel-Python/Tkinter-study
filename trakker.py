@@ -173,6 +173,9 @@ new_button.grid(row=4, column=3)
 send_button = Button(text="Email", command=send_email)
 send_button.grid(row=4, column=0)
 
+tmp_button = Button(text="Other", command=send_email)
+tmp_button.grid(row=4, column=2)
+
 
 clear_button = Button(text="Clear", command=clear_text)
 clear_button.grid(row=4, column=1)
@@ -186,10 +189,10 @@ direct_button.grid(row=0, column=3)
 dir_button = Button(text="Files Dir", command=files_listing)
 dir_button.grid(row=0, column=4)
 
-text = Text(height=5, width=30)
+text = Text(height=5, width=60)
 text.focus()
 text.insert(END, "File data goes here")
-text.grid(column=0,row=3, columnspan=3)
+text.grid(column=0,row=3, columnspan=2)
 
 
 
