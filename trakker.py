@@ -130,6 +130,18 @@ def files_listing():
     text.delete('1.0', END)
     text.insert(END, f" {text_list}")
 
+def multi_listing():
+    file_list = os.listdir("/")
+
+    text_list = ""
+    for d in file_list:
+        if d.endswith(".py"):
+            text_list += f"{d}, "
+
+    text.delete('1.0', END)
+    text.insert(END, f" {text_list}")
+
+
 
 
 window = Tk()
@@ -180,7 +192,7 @@ tmp_button.grid(row=4, column=2)
 clear_button = Button(text="Clear", command=clear_text)
 clear_button.grid(row=4, column=1)
 
-other_button = Button(text="Image", command=change_image)
+other_button = Button(text="Image", command=multi_listing)
 other_button.grid(row=0, column=2)
 
 direct_button = Button(text="Directory", command=dir_listing)
