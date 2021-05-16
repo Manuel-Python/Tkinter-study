@@ -141,7 +141,16 @@ def multi_listing():
     text.delete('1.0', END)
     text.insert(END, f" {text_list}")
 
-
+def open_File():
+    try:
+        with open("a_file.txt") as file:
+            file.read()
+    except:
+        print("Fail")
+    else:
+        print("It worked")
+    finally:
+        print("Finally")
 
 
 window = Tk()
@@ -185,7 +194,7 @@ new_button.grid(row=4, column=3)
 send_button = Button(text="Email", command=send_email)
 send_button.grid(row=4, column=0)
 
-tmp_button = Button(text="Other", command=send_email)
+tmp_button = Button(text="Other", command=open_File)
 tmp_button.grid(row=4, column=2)
 
 
