@@ -157,7 +157,7 @@ window = Tk()
 window.title("ISS Tracker")
 window.config(padx=20, pady=20)
 
-canvas = Canvas(height=200, width=200)
+canvas = Canvas(height=400, width=400)
 logo_img = PhotoImage(file="apple.png")
 canvas.create_image(100, 100, image=logo_img)
 canvas.grid(row=0, column=1)
