@@ -150,7 +150,7 @@ def open_File():
     else:
         print("It worked")
     finally:
-        print("Finally")
+        print("Finally do this")
 
 
 window = Tk()
