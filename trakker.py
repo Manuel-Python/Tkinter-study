@@ -142,6 +142,7 @@ def multi_listing():
     text.insert(END, f" {text_list}")
 
 def open_File():
+    a = False
     try:
         with open("a_file.txt") as file:
             file.read()
@@ -151,7 +152,8 @@ def open_File():
         print("It worked")
     finally:
         print("Finally do this")
-        raise TypeError
+        if a:
+            raise TypeError
 
 
 
