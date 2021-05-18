@@ -151,6 +151,8 @@ def open_File():
         print("It worked")
     finally:
         print("Finally do this")
+        raise TypeError
+
 
 
 window = Tk()
