@@ -1,9 +1,11 @@
 
-# with open('devops.txt', 'w') as line:
-# 	# Reads a specific line of text in the file.
-# 	line_text = c.readline()
-# 	print(line_text)
+from tkinter import *
+import os
+import requests
+
+
 nums = []
+
 
 
 with open('text.txt', 'r') as line:
@@ -31,3 +33,10 @@ with open('table.txt', 'w') as file:
 
 	print(line)
 	# file.write(nums)
+
+window = Tk()
+window.title("ASCII Encoder")
+window.config(padx=20, pady=20)
+
+
+window.mainloop()
