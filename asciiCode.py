@@ -39,6 +39,10 @@ window = Tk()
 window.title("ASCII Encoder")
 window.config(padx=20, pady=20)
 
+text = Text(height=5, width=60)
+text.focus()
+text.insert(END, "File data goes here")
+text.grid(column=0,row=3, columnspan=2)
 
 read_button = Button(text="Read File", command=process_file)
 read_button.grid(row=2, column=1)
