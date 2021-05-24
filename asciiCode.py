@@ -35,6 +35,10 @@ def process_file():
 	print(nums)
 	write_file(nums)
 
+def display_file():
+	pass
+
+
 window = Tk()
 window.title("ASCII Encoder")
 window.config(padx=20, pady=20)
@@ -44,7 +48,11 @@ text.focus()
 text.insert(END, "File data goes here")
 text.grid(column=0,row=3, columnspan=2)
 
-read_button = Button(text="Read File", command=process_file)
+read_button = Button(text="Encode File", command=process_file)
 read_button.grid(row=2, column=1)
+
+display_button = Button(text="Display File", command=display_file)
+display_button.grid(row=2, column=2)
+
 
 window.mainloop()
