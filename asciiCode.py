@@ -36,7 +36,12 @@ def process_file():
 	write_file(nums)
 
 def display_file():
-	pass
+	lines = ""
+	with open("table.txt") as data_file:
+		for line in data_file:
+			lines += line
+
+	print(lines)
 
 
 window = Tk()
